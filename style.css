@@ -1,0 +1,90 @@
+body{
+    height: 100vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: #
+    --secondary-color: #
+    --text-color: #
+}
+
+
+.grid-container{
+    grid-template-areas: 
+    ". navbar navbar navbar ."
+    ". header header header ."
+    ". main main sidebar ."
+    ". footer footer footer ."
+    ;
+    grid-template-columns:30px 1fr 1fr 1 fr 30px;
+    grid-template-rows: 50px 1fr 6fr 1fr ;
+    display: grid;
+    height: 100vh;
+}
+
+
+.navbar {    
+    grid-area: navbar;
+    background-color: #555;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.ul-list{
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    list-style-type: none;
+}
+
+.ul-list li{
+    text-align: left;
+}
+
+.ul-list a{
+    text-decoration: none;
+    color: aqua;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.main { 
+    grid-area: main;
+    background-color: #999;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #666;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
