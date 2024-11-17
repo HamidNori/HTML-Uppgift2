@@ -1,0 +1,121 @@
+body{
+    height: 100vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: #734B5E;
+    --secondary-color: #F5D3C8;
+    --third-color: #8A8D91;
+    --text-color: #000;
+    --background-color: #fff;
+}
+
+
+.grid-container{
+    grid-template-areas: 
+    " header header header header header"
+    "navbar navbar navbar navbar navbar"
+    "main main main sidebar sidebar"
+    "footer footer footer footer footer"
+    ;
+    grid-template-columns:30px 1fr 1fr 1fr 30px;
+    grid-template-rows: 1fr 1fr 6fr 1fr ;
+    display: grid;
+    height: 100vh;
+   
+}
+
+
+.navbar {    
+    grid-area: navbar;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.ul-list{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -30px;
+    text-align: center;
+    list-style-type: none;
+}
+
+.ul-list li{
+    text-align: left;
+}
+
+.ul-list a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 20px;
+    position: relative;
+}
+
+.ul-list a::before{
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.ul-list a:hover::before{
+    width: 100%;
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+.main { 
+    grid-area: main;
+    background-color: #fff;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.main-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding: 20px
+    
+    
+}
+
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--third-color);
+    color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+ }
