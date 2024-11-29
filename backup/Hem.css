@@ -1,5 +1,4 @@
 body {
-    height: 100vh;
     width: auto;
     margin: 0;
     padding: 0;
@@ -84,40 +83,17 @@ body {
 }
 
 
-.banner {
-    display: grid;
-    grid-area: banner;
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 0 0 5px;
 }
 
-.banner-bild{
-    width: 100%;
-    height: auto;
-    background-image: url('bild.jpg');
-    background-size: cover;
-}
 
-.section1, .section2{
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
 }
-
-.section2 {
-    background-color: #8A8D91;
-}
-
-.banner-text {
-    top: 40%;
-    left: 40%;
-    position: absolute;
-    font-family: poppins;
-    font-size: 40px;
-    color: black;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), 
-    5px 5px 70px rgba(255, 255, 255, 0.5);
-    transform: scale(1,1.1) 
-}
-
 
 .main {
     grid-area: main;
