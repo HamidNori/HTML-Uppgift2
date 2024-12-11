@@ -13,3 +13,14 @@ if (text && back && front) {
 } else {
     console.error("Ett eller flera element hittades inte. Kontrollera ID:n i din HTML.");
 }
+
+let slider = document.querySelector('.slider');
+let nextBnt = document.getElementById('next');
+let prevBnt = document.getElementById('prev');
+nextBnt.onclick = () =>{
+    slider.appendChild(slider.querySelector ('img:first-child'));
+}
+
+prevBnt.onclick = () => {
+    slider.prepend(slider.querySelector('img:last-child'));
+}
