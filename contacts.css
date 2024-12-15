@@ -1,15 +1,26 @@
-*{
-    padding:0 ;
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray-dark: #333;
+    --color-primary: #359381;
+    --color-red: #ff0000;
+    --color-text-dark: #000;
+    --color-text-light: #fff;
+    --color-placeholder: #359381;
+}
+
+* {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: poppins;
-    background: white;
+    background: var(--color-white);
 }
 
-.header{
+.header {
     width: 100%;
     padding: 30px 100px;
     box-sizing: border-box;
@@ -22,13 +33,13 @@ body {
 
 .logo {
     font-size: 2em;
-    color: #359381;
+    color: var(--color-primary);
     pointer-events: none;
 }
 
 .navigation a {
     text-decoration: none;
-    color: #359381;
+    color: var(--color-primary);
     padding: 6px 15px;
     border-radius: 20px;
     margin: 0 10px;
@@ -36,18 +47,15 @@ body {
 }
 
 .navigation a:hover, .navigation a.aktiv {
-    background: #359381;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-text-light);
 }
-
-
 
 .contact-container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
 }
 
 .contact-left {
@@ -59,7 +67,7 @@ body {
 
 .contact-left-title h2 {
     font-weight: 600;
-    color: black;
+    color: var(--color-text-dark);
     font-size: 40px;
     margin-bottom: 5px;
 }
@@ -68,7 +76,7 @@ body {
     border: none;
     width: 120px;
     height: 5px;
-    background-color: black;
+    background-color: var(--color-text-dark);
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -76,11 +84,11 @@ body {
 .contact-input {
     width: 400px;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid var(--color-text-dark);
     outline: none;
     padding-left: 25px;
     font-weight: 400;
-    color: black;
+    color: var(--color-text-dark);
     border-radius: 50px;
 }
 
@@ -90,12 +98,12 @@ body {
     border-radius: 20px;
 }
 
-.contact-input:focus{
-    border: 2px solid red;
+.contact-input:focus {
+    border: 2px solid var(--color-red);
 }
 
-.contact-input::placeholder{
-    color: #359381;
+.contact-input::placeholder {
+    color: var(--color-placeholder);
 }
 
 .contact-left button {
@@ -103,19 +111,19 @@ body {
     align-items: center;
     padding: 15px 30px;
     font-size: 16px;
-    color: #fff;
+    color: var(--color-text-light);
     gap: 10px;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(270deg, black, white);
+    background: linear-gradient(270deg, var(--color-black), var(--color-white));
     cursor: pointer;
 }
 
-.contact-left button:hover{
-    background: linear-gradient(270deg, #ff0000, #ff0000);
+.contact-left button:hover {
+    background: linear-gradient(270deg, var(--color-red), var(--color-red));
 }
 
-.contact-right img{
+.contact-right img {
     width: 500px;
 }
 

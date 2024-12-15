@@ -1,4 +1,14 @@
-*{
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray-dark: #333;
+    --color-gray-shadow: rgba(0, 0, 0, 0.2);
+    --color-primary: #359381;
+    --color-text-light: #fff;
+    --color-text-dark: #333;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,12 +16,13 @@
 }
 
 body {
-    background: #fff;
+    background: var(--color-white);
     max-height: 100vh;
     overflow-x: hidden;
+    position: relative;
 }
 
-header{
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,13 +36,13 @@ header{
 
 .logo {
     font-size: 2em;
-    color: #359381;
+    color: var(--color-primary);
     pointer-events: none;
 }
 
 .navigation a {
     text-decoration: none;
-    color: #359381;
+    color: var(--color-primary);
     padding: 6px 15px;
     border-radius: 20px;
     margin: 0 10px;
@@ -39,8 +50,8 @@ header{
 }
 
 .navigation a:hover, .navigation a.aktiv {
-    background: #359381;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-text-light);
 }
 
 .parallax {
@@ -49,15 +60,15 @@ header{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
-
 
 #text {
     position: absolute;
     font-size: 5em;
-    color: #333;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0, .2) ;
-    
+    color: var(--color-gray-dark);
+    text-shadow: 2px 2px 4px var(--color-gray-shadow);
+    will-change: margin-top;
 }
 
 .parallax img {
@@ -66,28 +77,30 @@ header{
     left: 0;
     width: 100%;
     pointer-events: none;
+    will-change: top, left;
 }
 
 .main {
     position: relative;
-    background: #359381;
+    background: var(--color-primary);
     padding: 100px;
 }
 
 .main h2 {
     font-size: 3em;
-    color: #fff;
+    color: var(--color-text-light);
     margin-bottom: 10px;
 }
 
 .main p {
     font-size: 1em;
-    color: #fff;
+    color: var(--color-text-light);
     font-weight: 300;
 }
 
 /* Responsiv design */
 @media (max-width: 768px) {
+
     .header {
         flex-direction: column;
         padding: 10px;
@@ -114,5 +127,3 @@ header{
         font-size: 0.9em;
     }
 }
-
-
